@@ -1,0 +1,46 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp4
+{
+    internal class program
+    {
+        class Employee
+        {
+            public int Id;
+            public int Age;
+            public string Name;
+
+            public Employee(int Id, int Age, string Name)
+            {
+
+                this.Id = Id;
+                this.Age = Age;
+                this.Name = Name;
+            }
+            static void Main(string[] args)
+            {
+                Employee employee1 = new Employee(12000, 18, "sumit");
+                Employee employee2 = new Employee(12300, 19, "amit");
+                Employee employee3 = new Employee(13300, 20, "shivam");
+                List<Employee> data = new List<Employee>();
+
+                data.Add(employee1);
+                data.Add(employee2);
+                data.Add(employee3);
+
+                foreach (Employee emp in data)
+                {
+
+                    Console.WriteLine("employee id is =" + emp.Id);
+                    Console.WriteLine(" employee age is =" + emp.Age);
+                    Console.WriteLine("employee name is = " + emp.Name);   
+                }
+                Console.ReadLine();
+            }
+        }
+    }
+}
